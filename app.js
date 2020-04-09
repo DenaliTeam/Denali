@@ -40,6 +40,6 @@ fs.readdir('./cmd/', (err, files) => {
   })
 })
 
-//mfa.4CcgrwC8xcdBUYQXFLN2Y7R6F70zq3yOYmQr-sHUJlrvUaMjQGwwICtkiBnxPjYmUMkSWLoa-7olLjnA9Hpq
+
 
 client.login(process.env.TOKEN);
