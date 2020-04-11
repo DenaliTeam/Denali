@@ -7,6 +7,7 @@ client.net.ensure('hqGlr', {
     'description':'None provided',
     'owner':'298295889720770563'
 })
+client.net.set('hqGlr', '', 'memberlist')
 client.guilds.forEach(g => {
     var members = client.net.get('hqGlr', 'memberlist')
     var newlist = members + g.id +', '
