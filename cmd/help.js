@@ -41,7 +41,7 @@ exports.run = (client, message, args) => {
                         },
                         {
                             name: '-help (page)',
-                            value: 'Bans a user and warns other servers in your team of them'
+                            value: 'Gets the help page'
                         },
                         {
                             name: '**[X]** -createteam',
