@@ -2,12 +2,12 @@ exports.run = (client, message, args) => {
     //checks for proper permissions
 
     if(!message.guild.members.get(message.author.id).hasPermission('BAN_MEMBERS', false, true, true)) return
-    
-        if(typeof message.mentions.members.first() == 'undefined') {console.log('error'); return}
+        var target = message.mentions.members.first() || message.guild.members.get(args[0])
+        if(typeof target == 'undefined') return
         try{
         if(typeof args[1] == 'undefined'){
             if(typeof client.net.get(message.guild.id, 'alertchannel') == 'undefined') {message.channel.send({embed:{title:'Error', description: 'The bot has not been set up yet, please run the `setup` command.'}}); return}
-            message.mentions.members.first().ban('Banned using NetWarn')
+            target.ban('Banned using NetWarn')
             var ac = client.net.get(message.guild.id, 'logchannel')
 
             message.guild.channels.get(ac).send({
@@ -46,7 +46,7 @@ exports.run = (client, message, args) => {
             var ras = message.content.slice(5 + args[0].length + 1, message.content.length)
             if(typeof client.net.get(message.guild.id, 'alertchannel') == 'undefined') {message.channel.send({embed:{title:'Error', description: 'The bot has not been set up yet, please run the `setup` command.'}}); return}
             var ac = client.net.get(message.guild.id, 'logchannel')
-            message.mentions.members.first().ban(ras)
+            target.ban(ras)
 
             message.guild.channels.get(ac).send({
                 embed:{
