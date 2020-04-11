@@ -14,7 +14,7 @@ const fs = require('fs')
 
 client.on('ready', () =>{
   console.log(`Logged on as ${client.user.tag}`)
-  client.user.setActivity(`out for trolls. | try -help | v0.1.4`, {type: 'WATCHING'})
+  client.user.setActivity(`out for trolls. | try -help | v0.1.4a`, {type: 'WATCHING'})
 })
 
 
