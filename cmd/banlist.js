@@ -1,9 +1,7 @@
 exports.run = (client, message, args) => {
     var list = ''
-    console.log(client.net)
     var u = message.mentions.users.first() || args[0]
         if(typeof u == 'undefined') return
-        console.log(args[0])
     
        var bans = client.net.get(`bans-${u.id || args[0]}`, 'guilds').split(', ')
        var name = client.net.get(`bans-${u.id || args[0]}`, 'name')
