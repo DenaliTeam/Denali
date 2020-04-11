@@ -19,6 +19,10 @@ exports.run = (client, message, args) => {
                             value: 'Gets the help page'
                         },
                         {
+                            name: '-banlist [user | userid]',
+                            value: 'Gets list of servers the user is banned in'
+                        },
+                        {
                             name: '**[X]** -createteam',
                             value: 'Starts the team creation setup\n**Not yet implimented**'
                         }
@@ -42,6 +46,10 @@ exports.run = (client, message, args) => {
                         {
                             name: '-help (page)',
                             value: 'Gets the help page'
+                        },
+                        {
+                            name: '-banlist [user | userid]',
+                            value: 'Gets list of servers the user is banned in'
                         },
                         {
                             name: '**[X]** -createteam',
