@@ -9,7 +9,7 @@ exports.run = (client, message, args) => {
                 description: '```' + warning + '```'
             },
             footer:{
-                'text': `From ${message.guild.name}`,
+                'text': `Warning from ${message.guild.name}`,
                 'icon_url': message.guild.iconURL
             }
         })
